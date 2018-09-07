@@ -4,18 +4,39 @@
     <meta charset="utf-8">
     <title></title>
     <style>
+      html {
+        margin: 0;
+        padding: 0;
+      }
       body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
         background-color: #CFE7FF;
       }
-      img {
+      #tim {
         width: 75%;
         height: 75%;
         object-fit: scale-down;
+        z-index: -1;
+        opacity: 0.3;
       }
       .parent {
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      .corner {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+      }
+      #corner {
+        width: 25%;
+        height: 25%;
+        object-fit: scale-down;
+        z-index: -1;
+        opacity: 0.3;
       }
     </style>
     <script>
@@ -33,9 +54,16 @@
       }
     </script>
   </head>
-  <body onload="cycle()" class="parent">
-    <center><h1> Hi i'm Tim Bargo </h1></center>
-    <img id="tim">
+  <body onload="cycle()">
 
+    <div>
+
+    </div>
+
+
+    <div class="parent">
+      <img id="tim"></img>
+    </div>
+    <img src="images/tim1.jpg" id="corner" class="corner"></img>
   </body>
 </html>
